@@ -1,0 +1,12 @@
+/*.q42021 {*/
+/*    display: none;*/
+/*}*/
+
+svg div {
+    background-color: red;
+}
+
+svg g#roadmapsvg g.roadmap-q4-2021:hover + div {
+    /*display: block;*/
+    background-color: yellow;
+}
