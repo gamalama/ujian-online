@@ -24,4 +24,34 @@ class Exam extends Model
         'random_answer',
         'show_answer',
     ];
+
+    /**
+     * lesson
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function lesson()
+    {
+        return $this->belongsTo(Lesson::class);
+    }
+
+    /**
+     * classroom
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function classroom()
+    {
+        return $this->belongsTo(Classroom::class);
+    }
+
+    /**
+     * questions
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function questions()
+    {
+        return $this->hasMany(Question::class)->orderBy('id', 'DESC');
+    }
 }

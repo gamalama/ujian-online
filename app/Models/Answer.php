@@ -24,4 +24,14 @@ class Answer extends Model
         'answer',
         'is_correct',
     ];
+
+    /**
+     * question
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function question()
+    {
+        return $this->belongsTo(Question::class);
+    }
 }

@@ -21,4 +21,14 @@ class Student extends Model
         'password',
         'gender'
     ];
+
+    /**
+     * classroom
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function classroom()
+    {
+        return $this->belongsTo(Classroom::class);
+    }
 }

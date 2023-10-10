@@ -24,4 +24,14 @@ class Question extends Model
         'option_5',
         'answer',
     ];
+
+    /**
+     * exam
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function exam()
+    {
+        return $this->belongsTo(Exam::class);
+    }
 }
